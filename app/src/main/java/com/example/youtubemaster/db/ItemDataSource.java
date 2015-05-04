@@ -49,7 +49,6 @@ public class ItemDataSource extends DataSource {
 			long result = mDatabase.insert(TABLE_NAME, null,
 					generateContentValuesFromObject(item));
 
-			System.out.println("Insertingaaaaa " + item.getId());
 			return result != -1;
 		}
 		return true;

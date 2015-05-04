@@ -41,8 +41,7 @@ public class YoutubeDisplay extends YouTubeBaseActivity implements
 			boolean wasRestored) {
 		// TODO Auto-generated method stub
 		
-		System.out.println("Loading videourl " + videoId);
-		
+
 		player.loadVideo(videoId);
 		 
         // Hiding player controls

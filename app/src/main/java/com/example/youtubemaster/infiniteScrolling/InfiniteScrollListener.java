@@ -43,8 +43,7 @@ public abstract class InfiniteScrollListener{
 			isLoading = true;
 		}*/
 		
-		System.out.println("onScroll called.");
-		
+
 		
 
 	}

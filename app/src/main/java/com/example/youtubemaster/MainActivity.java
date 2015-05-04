@@ -153,7 +153,6 @@ public class MainActivity extends ActionBarActivity implements
 
 	@Override
 	public void onLoadFinished(Loader<List<Item>> loader, List<Item> data) {
-		System.out.println("onLoadFinished() called!");
 		isLoading = false;
 		//mYoutubeAdapter.clear();
 		mRecyclerAdapter.clear();
@@ -177,7 +176,6 @@ public class MainActivity extends ActionBarActivity implements
 
 	@Override
 	public void onLoaderReset(Loader<List<Item>> arg0) {
-		System.out.println("onLoaderResetted");
 		mYoutubeAdapter.clear();
 	}
 
@@ -186,7 +184,6 @@ public class MainActivity extends ActionBarActivity implements
 		@Override
 		protected Void doInBackground(Integer... ints) {
 			isLoading = true;
-			System.out.println("asynctasking " + ints[0]);
 			List<Item> li = YoutubeGetter.getItems(ints[0]);
 			for (Item i : li) {
 				mDataSource.insert(i);
@@ -195,8 +192,6 @@ public class MainActivity extends ActionBarActivity implements
 
 			isLoading = false;
 
-			System.out.println("Count is "
-					+ new Integer(mDataSource.getCount()).toString());
 			return null;
 		}
 	}

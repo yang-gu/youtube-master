@@ -29,7 +29,6 @@ public class SQLiteTestDataLoader extends AbstractDataLoader<List<Item>> {
 	protected List buildList() {
 		List testList = mDataSource.read(mSelection, mSelectionArgs, mGroupBy,
 				mHaving, mOrderBy);
-		System.out.println("buildListing");
 		return testList;
 	}
 }

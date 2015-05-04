@@ -31,17 +31,13 @@ public class YoutubeGetter {
 			JSONObject base = new JSONObject(jsonStr);
 			JSONObject data = base.getJSONObject("data");
 			JSONArray ja = data.getJSONArray("items");
-			Log.e("Length is:", ja.length() + "");
 			for (int i = 0; i < ja.length(); i++) {
-				Log.e("Iteration ", i + "");
 				JSONObject jo = ja.getJSONObject(i);
-				Log.e("Got jsonobject", new Integer(i).toString());
 				Item item = new Item();
 				item.setId(jo.getString("id"));
 				item.setCategory(jo.getString("category"));
 				item.setDescription(jo.getString("description"));
 				item.setTitle(jo.getString("title"));
-				Log.e("got item fields", new Integer(i).toString());
 
 				Thumbnail thnail = new Thumbnail();
 				JSONObject jThumbnail = jo.getJSONObject("thumbnail");
@@ -76,7 +72,6 @@ public class YoutubeGetter {
 					builder.append(line);
 				}
 			} else {
-				Log.e(YoutubeGetter.class.toString(), "Failed to download file");
 			}
 		} catch (ClientProtocolException e) {
 			e.printStackTrace();

@@ -34,7 +34,6 @@ public abstract class AbstractDataLoader<E extends List<?>> extends
 			emptyDataList(dataList);
 			return;
 		}
-		System.out.println("deliverResulted insertingaaa." + dataList.size());
 		E oldDataList = mLastDataList;
 		mLastDataList = dataList;
 		if (isStarted()) {
@@ -57,7 +56,6 @@ public abstract class AbstractDataLoader<E extends List<?>> extends
 	@Override
 	protected void onStartLoading() {
 		
-		System.out.println("onStartLoadinged");
 		if (mLastDataList != null) {
 			deliverResult(mLastDataList);
 		}
@@ -74,7 +72,6 @@ public abstract class AbstractDataLoader<E extends List<?>> extends
 	protected void onStopLoading() {
 		// Attempt to cancel the current load task if possible.
 		
-		System.out.println("onStopLoadinged");
 		cancelLoad();
 	}
 
