@@ -2,6 +2,6 @@ package com.example.youtubemaster;
 
 public class Config {
 	
-	public static String DEVELOPER_KEY = "AIzaSyA8Z9MWTF7YSivOFDY5ZqS3UziYOV-tYyM";
+	public static String DEVELOPER_KEY = "AIzaSyCFSvagWG2GS3PNDD1z0ewNCtmC4YEoZs4";
 
 }
